@@ -107,10 +107,16 @@ li {
   Header styling starts here
 =================================*/
 
+header .wrapper{
+  text-align: center;
+  background-color: #2b2e37;
+}
 
-
-
-
+header p{
+  color: #ffffff;
+  font-size: 30px;
+  padding: 10px 0;
+}
 
 /*=================================
   Header styling ends here
@@ -120,30 +126,58 @@ li {
   main styling starts here
 =================================*/
 
+main .wrapper{ width: 70%; }
 
+.card-list{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
+.card{
+  width: 28%;
+  margin: 20px 0;
+}
 
+.card p{
+  color: #2e7512;
+  background: #daa520;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+}
 
+.modal{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-color: rgba( 50,50,50,0.7);
+  z-index: 1;
+}
 
+.modal::after{
+  content: "\f00d";
+  color: #ffffff;
+  font-size: 35px;
+  font-family: FontAwesome;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
 
+.modal-card{
+  margin: auto;
+  width: 100%;
+  max-width: 180px;
+  margin-top:50vh;
+  transform: translateY(-50%);
+}
 
+.hide-me{ display: none; }
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
 
 /*media query starts*/
 /*media query for 995px starts here*/
