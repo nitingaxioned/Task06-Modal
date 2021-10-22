@@ -1,9 +1,8 @@
 // variable declerations
-var cards = document.querySelectorAll(".card");
 var modal = document.querySelector(".modal");
 
 // event handeller 
-cards.forEach(function(val){
+document.querySelectorAll(".card").forEach(function(val){
     val.addEventListener("click",function(){
         if(modal.querySelector("div") == null)
             modal.appendChild(document.createElement("div"));
@@ -15,11 +14,11 @@ cards.forEach(function(val){
         });
         node.classList.add("card","modal-card");
         modal.classList.remove("hide-me");
+        node.addEventListener("click", function(e){ e.stopPropagation() })
     });
 });
 
-
 // event handeller for close modal
-document.querySelector(".close").addEventListener("click", function(){
+modal.addEventListener("click", function(){
     modal.classList.add("hide-me");
 })
